@@ -1,0 +1,223 @@
+@import url('https://fonts,googleapis.com/css2?family=poppins:wght@200;400;600&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background: #ece9e6;
+    background: -webkit-linear-gradient(
+        to right,
+        #d33d3d,
+        #f07e0c
+    );
+    background: linear-gradient(
+        to right,
+        #d82c2c,
+        #d36f0b
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'poppins',sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 100%;
+}
+
+.mobile-container{
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 3px;
+    /* margin: 0 5px; */
+    box-shadow: 0 0 2px #3333331a;
+    overflow: auto;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 1rem; */
+}
+
+header input{
+    background-color: #e7e5e5;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    width: 40%;
+}
+
+header button{
+    /* border-radius: 50%; */
+    /* border: solid black 3px; */
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+     display: flex;
+    height: 15px;
+    border: none;
+    background-color: transparent;
+
+}
+
+.fav-container{
+    background-color: rgb(243, 225, 255);
+    text-align: center;
+    /* padding: 0.25rem 1rem; */
+    max-width: 100%;
+}
+
+.fav-meals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li{
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    width: 75px;
+}
+
+.fav-meals li .clear{
+    top: -0.5rem;
+    right: -0.5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+}
+
+
+
+.fav-meals li img{
+    background: #ffffff;
+    border: 2px solid #ffffff;
+    box-shadow:  0 0 2px #3333331a;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.fav-meals li span{
+    display: inline-block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+
+}
+@media(min-width:800px){
+    .meals{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 3%;
+    }
+  
+}
+.meal{
+   max-width: 100%;
+    border-radius: 3px;
+    box-shadow:  0 0 3px #3333331a;
+    margin: 1.5rem;
+    overflow: hidden;
+    border: 0.5px solid #3333331a;
+    cursor: pointer;
+}
+.meal-header{
+    position: relative;
+}
+
+.meal-header .random{
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+    background-color: #fff;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img{
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+.meal-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.meal-body h4{
+    margin: 0;
+}
+.meal-body .fav-btn{
+    border: none;
+    color: rgb(245, 67, 67);
+    font-size: 2rem;
+    right: 1rem;
+}
+
+.meal-body .fav-btn.active{
+    color: rebeccapurple;
+   
+    /* border: solid rebeccapurple 5px; */
+}
+.popup-container{
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    padding: 2rem;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.popup-container.hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    background-color: #fff;
+    max-width: 550px;
+    width: 100%;
+    height: 100%;
+    padding:0 2rem;
+    border-radius: 5px;
+    overflow: auto;
+    position: relative;
+}
+
+
+.meal-info h1{
+    text-align: center;
+    
+}
+.popup .close-popup{
+    cursor: pointer;
+    /* border: solid black 5px; */
+    font-size: 1rem;
+    right: 1rem;
+    margin-right: 28rem;
+    top: 2rem;
+    position: relative;
+}
